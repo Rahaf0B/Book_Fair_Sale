@@ -1,0 +1,45 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Root.master.cs" Inherits="BookFair.Root" %>
+
+
+
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, user-scalable=no, maximum-scale=1.0, minimum-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href='<%# ResolveUrl("~/Content/Content.css") %>' />
+    <link rel="stylesheet" type="text/css" href='<%# ResolveUrl("~/Content/Layout.css") %>' />
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" />
+<link href="https://fonts.googleapis.com/css2?family=Concert+One&display=swap" rel="stylesheet"/>
+    <title>Book Fair Sale</title>
+
+        <%--<script type="text/javascript" src='<%# ResolveUrl("~/Content/Script.js") %>'></script>--%>
+
+</head>
+    
+<body>
+    <style>
+   body{
+       margin:0 !important;
+
+   }
+    </style>
+    <form id="form1" runat="server">
+        <div class="content-wrapper">
+     
+
+            <div class="content">
+                <asp:ContentPlaceHolder ID="PageContent" runat="server" OnInit="PageContent_Init">
+
+                </asp:ContentPlaceHolder>
+
+
+     
+            </div>
+
+        </div>
+    </form>
+</body>
+</html>
