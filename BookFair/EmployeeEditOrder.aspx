@@ -86,6 +86,7 @@ Inherits="BookFair.EmployeeEditOrder" Async="true"%>
         <dx:ASPxLabel ID="ASPxLabelOrderNumber" runat="server"></dx:ASPxLabel>
         <dx:ASPxLabel ID="ASPxLabelOrderStatus" runat="server"></dx:ASPxLabel>
         <dx:ASPxLabel ID="ASPxLabelOrderDate" runat="server"></dx:ASPxLabel>
+        <dx:ASPxLabel ID="ASPxLabelOrderPrice" runat="server"></dx:ASPxLabel>
       </dx:PanelContent>
     </PanelCollection>
   </dx:ASPxPanel>

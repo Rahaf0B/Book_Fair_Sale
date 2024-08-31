@@ -47,7 +47,7 @@ namespace BookFair.Services
                     {
                         Cart cart = await _cartController.CreateGetUserCart(uow, customer);
                         bool bookStatus = await _cartController.CheckBookExistCart(uow, book, cart);
-                        if (bookStatus)
+                        if (!bookStatus)
                         {
                             await uow.CommitChangesAsync();
                             popWindowText = "The Book Is Already in Your Cart";

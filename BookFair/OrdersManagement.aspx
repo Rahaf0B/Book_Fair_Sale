@@ -133,6 +133,20 @@ Inherits="BookFair.OrdersManagement" Async="true"%>
                     <CellStyle HorizontalAlign="Center" VerticalAlign="Middle">
                     </CellStyle>
                   </dx:GridViewDataTextColumn>
+                  <dx:GridViewDataTextColumn
+                    Caption="Total Price"
+                    FieldName="total_price"
+                    ShowInCustomizationForm="True"
+                    VisibleIndex="5"
+                  >
+                    <EditFormSettings Visible="False" />
+                    <HeaderStyle
+                     HorizontalAlign="Center"
+                     VerticalAlign="Middle"
+                    />
+                    <CellStyle HorizontalAlign="Center" VerticalAlign="Middle">
+                    </CellStyle>
+                  </dx:GridViewDataTextColumn>
                   <dx:GridViewDataComboBoxColumn
                     Caption="Status"
                     FieldName="status"

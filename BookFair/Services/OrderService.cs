@@ -48,12 +48,15 @@ namespace BookFair.Services
 
                         List<CartInfo> cartItems = await _cartController.GetCartItems(uow, cart);
                         Order order = await _orderController.CreateAndGetCreatedOrder(uow, customer);
+                            decimal Total_Price = 0;
 
                         foreach (CartInfo item in cartItems)
                         {
                             Book book = await _bookInstance.GetBookInstanceByID(uow, item.id);
+
                             if (book.Quantity >= item.quantity)
                             {
+                                Total_Price= Total_Price+ book.Price;
                                 CartItems cartItem = await _cartController.GetSingleCartItem(uow, cart, book);
                                 book.Quantity = book.Quantity - item.quantity;
                                 await uow.SaveAsync(book);
@@ -61,6 +64,10 @@ namespace BookFair.Services
                                 await uow.DeleteAsync(cartItem);
                             }
                         }
+                        
+                            order.Total_Price = order.Total_Price + Total_Price;
+                            await uow.SaveAsync(order);
+
                     }
 
                     await uow.CommitChangesAsync();

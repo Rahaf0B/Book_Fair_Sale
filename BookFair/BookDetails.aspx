@@ -16,7 +16,8 @@ Inherits="BookFair.BookDetails" Async="true" %>
       align-items: center;
       justify-content: space-evenly;
       box-shadow: 1px 1px 15px 2px rgba(230, 189, 150, 0.6);
-
+      padding-top:20px;
+      padding-bottom:20px;
       border-radius: 15px;
     }
 
@@ -181,14 +182,14 @@ Inherits="BookFair.BookDetails" Async="true" %>
           </div>
           <div class="label-value-info">
             <dx:ASPxLabel
-              ID="ASPxLabelD"
+              ID="ASPxLabelinfoQ"
               CssClass="label-text"
               runat="server"
-              Text="Description"
+              Text="Quantity"
             ></dx:ASPxLabel>
 
             <dx:ASPxLabel
-              ID="ASPxInfoDescription"
+              ID="ASPxInfQuantity"
               runat="server"
               ForeColor="GrayText"
               Font-Size="20px"
@@ -227,17 +228,16 @@ Inherits="BookFair.BookDetails" Async="true" %>
               </dx:ASPxLabel>
             </div>
           </div>
-
           <div class="label-value-info">
             <dx:ASPxLabel
-              ID="ASPxLabelinfoQ"
+              ID="ASPxLabelD"
               CssClass="label-text"
               runat="server"
-              Text="Quantity"
+              Text="Description"
             ></dx:ASPxLabel>
 
             <dx:ASPxLabel
-              ID="ASPxInfQuantity"
+              ID="ASPxInfoDescription"
               runat="server"
               ForeColor="GrayText"
               Font-Size="20px"

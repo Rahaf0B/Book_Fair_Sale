@@ -33,6 +33,7 @@ namespace BookFair.Models
 
         private string _title;
         [Persistent("title")]
+        [Nullable(true)]
         public string Title {
 
 

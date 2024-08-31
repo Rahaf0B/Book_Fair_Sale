@@ -114,6 +114,17 @@ Inherits="BookFair.OrdersPage" Async="true" %>
               <CellStyle HorizontalAlign="Center" VerticalAlign="Middle" />
             </dx:GridViewDataTextColumn>
 
+            <dx:GridViewDataTextColumn
+                Caption="Total Price"
+                FieldName="total_price"
+                Name="Total_Price"
+                ShowInCustomizationForm="True"
+                VisibleIndex="2"
+            >
+                <headerstyle HorizontalAlign="Center" />
+                <CellStyle HorizontalAlign="Center" VerticalAlign="Middle" />
+            </dx:GridViewDataTextColumn>
+
             <dx:gridviewdatacolumn VisibleIndex="10" Width="15%">
               <dataitemtemplate>
                 <dx:aspxbutton

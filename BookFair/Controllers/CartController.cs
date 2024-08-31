@@ -70,12 +70,14 @@ namespace BookFair.Controllers
 
             {
 
-                CriteriaOperator ItemFilter = CriteriaOperator.Parse("Link_Book = ? and Link_Cart", book, cart);
 
-                CartItems item = await session.FindObjectAsync<CartItems>(ItemFilter);
+                XPQuery<Book> books = new XPQuery<Book>(session);
+                XPQuery<CartItems> items = new XPQuery<CartItems>(session);
 
-                return item != null;
-
+                List<CartItems> cartItems = await Task.Run(() =>
+                items.Where(item => item.Link_Cart == cart && item.Link_Book == book).ToList());
+             
+                return cartItems?.Count==0;
 
             }
             catch (Exception ex)

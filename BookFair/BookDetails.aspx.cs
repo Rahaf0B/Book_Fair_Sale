@@ -38,6 +38,8 @@ namespace BookFair
                             {
                                 ASPxButtonDelete.Visible = false;
                                 ASPxButtonEdit.Visible = false;
+                                ASPxLabelinfoQ.Visible = false;
+                                ASPxInfQuantity.Visible = false;
                             }
                             else if (UserRole == UserRole.Employee)
                             {

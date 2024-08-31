@@ -34,6 +34,7 @@ namespace BookFair.Models
 
         private string _first_name;
         [Persistent("first_name")]
+        [Nullable(true)]
         public string First_Name
         {
             get => _first_name;
@@ -45,6 +46,7 @@ namespace BookFair.Models
 
         private string _last_name;
         [Persistent("last_name")]
+        [Nullable(true)]
         public string Last_Name
         {
             get => _last_name;
@@ -58,6 +60,7 @@ namespace BookFair.Models
         private string _email;
         [Persistent("email")]
         [Indexed(Unique = true)]
+        [Nullable(true)]
         public string Email
         {
             get => _email;
@@ -71,6 +74,7 @@ namespace BookFair.Models
 
         private string _password;
         [Persistent("password")]
+        [Nullable(true)]
         public string Password
         {
             get => _password;
@@ -83,6 +87,7 @@ namespace BookFair.Models
 
         private UserRole _userRole;
         [Persistent("user_role")]
+        [Nullable(true)]
         public UserRole User_Role
         {
             get => _userRole;

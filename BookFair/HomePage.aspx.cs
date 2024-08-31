@@ -161,7 +161,7 @@ namespace BookFair
                     CustomeCardView customeViewCard = (CustomeCardView)LoadControl("~/CustomeComponents/CustomeCardView.ascx");
 
                     var imageUrl = "";
-                    customeViewCard.ID = item.id.ToString();
+                    customeViewCard.ID = item.id.ToString() ;
                     customeViewCard.Element_ID = item.id;
                     customeViewCard.TitleText = item.title;
                     customeViewCard.SubjectText = item.subject;

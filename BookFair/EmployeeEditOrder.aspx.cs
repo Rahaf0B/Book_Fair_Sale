@@ -71,6 +71,8 @@ namespace BookFair
                     ASPxLabelOrderNumber.Text = "Order Number : " + order.id;
                     ASPxLabelOrderStatus.Text = "Order Status : " + order.status;
                     ASPxLabelOrderDate.Text = "Order Date : " + order.date;
+                    ASPxLabelOrderPrice.Text = "Order Total Price : " + order.total_price;
+
                     (List<OrderItemInfo> orderItems, OrderStatus status) = await _orderInstance.Get_Customer_Order_Items(order.id);
                     await BindData(orderItems);
                 }
@@ -83,13 +85,12 @@ namespace BookFair
 
         private async Task BindData(List<OrderItemInfo> dataToBind)
         {
-            var OrderType = OrderStatus.pending;
             for (int i = 0; i < dataToBind.Count; i++)
             {
                 CartOrderItemCustomeComponent customeComponent = (CartOrderItemCustomeComponent)LoadControl("~/CustomeComponents/CartOrderItemCustomeComponent.ascx");
 
                 var imageUrl = "";
-                customeComponent.ID = dataToBind[i].id.ToString();
+                customeComponent.ID = dataToBind[i].id.ToString() + i.ToString();
                 customeComponent.Element_ID = dataToBind[i].id;
                 customeComponent.TitleText = dataToBind[i].title;
                 customeComponent.PriceText = dataToBind[i].price;

@@ -38,6 +38,7 @@ namespace BookFair.Models
 
         private string _name;
         [Persistent("author")]
+        [Nullable(true)]
         public string Name
         {
             get => _name;

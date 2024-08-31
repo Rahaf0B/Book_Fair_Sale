@@ -92,7 +92,9 @@ namespace BookFair.Controllers
                 new OrderInfo { customer_name = order.Customer.First_Name + " " + order.Customer.Last_Name,
                     date = order.Order_Date,
                     id = order.Order_id, 
-                    status = order.Order_Status }).ToList());
+                    status = order.Order_Status,
+                    total_price = order.Total_Price
+                }).ToList());
 
                 return orderInfos;
             }
@@ -113,7 +115,9 @@ namespace BookFair.Controllers
                     customer_name = order.Result.Customer.First_Name + " " + order.Result.Customer.Last_Name,
                     date = order.Result.Order_Date,
                     id = order.Result.Order_id,
-                    status = order.Result.Order_Status
+                    status = order.Result.Order_Status,
+                    total_price = order.Result.Total_Price
+                    
                 }
 
                 );
@@ -261,7 +265,9 @@ namespace BookFair.Controllers
                     customer_name = c.First_Name + c.Last_Name,
                     id = o.Order_id,
                     date = o.Order_Date,
-                    status = o.Order_Status
+                    status = o.Order_Status,
+                    total_price = o.Total_Price,
+                    
 
                 }).ToList();
 

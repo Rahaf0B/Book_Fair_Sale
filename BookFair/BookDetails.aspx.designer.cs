@@ -96,22 +96,22 @@ namespace BookFair
         protected global::DevExpress.Web.ASPxLabel ASPxInfoSubject;
 
         /// <summary>
-        /// ASPxLabelD control.
+        /// ASPxLabelinfoQ control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DevExpress.Web.ASPxLabel ASPxLabelD;
+        protected global::DevExpress.Web.ASPxLabel ASPxLabelinfoQ;
 
         /// <summary>
-        /// ASPxInfoDescription control.
+        /// ASPxInfQuantity control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DevExpress.Web.ASPxLabel ASPxInfoDescription;
+        protected global::DevExpress.Web.ASPxLabel ASPxInfQuantity;
 
         /// <summary>
         /// ASPxLabelA control.
@@ -150,22 +150,22 @@ namespace BookFair
         protected global::DevExpress.Web.ASPxLabel ASPxInfPrice;
 
         /// <summary>
-        /// ASPxLabelinfoQ control.
+        /// ASPxLabelD control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DevExpress.Web.ASPxLabel ASPxLabelinfoQ;
+        protected global::DevExpress.Web.ASPxLabel ASPxLabelD;
 
         /// <summary>
-        /// ASPxInfQuantity control.
+        /// ASPxInfoDescription control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DevExpress.Web.ASPxLabel ASPxInfQuantity;
+        protected global::DevExpress.Web.ASPxLabel ASPxInfoDescription;
 
         /// <summary>
         /// ASPxButtonAddToCart control.

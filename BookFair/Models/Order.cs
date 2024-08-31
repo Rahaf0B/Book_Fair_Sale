@@ -87,6 +87,14 @@ namespace BookFair.Models
         Customer customer;
 
 
+        private decimal _total_price;
+        [Persistent("total_price")]
+        public decimal Total_Price
+        {
+            get => _total_price;
+            set { SetPropertyValue<decimal>(nameof(Total_Price), ref _total_price, value); }
+        }
+
         protected override void OnDeleting()
         {
             var itemsCopy = Order_Items.ToList();

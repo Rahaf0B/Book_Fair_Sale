@@ -41,6 +41,7 @@ namespace BookFair.Models
         //This Attribute Should have => full-text search index
         private string _title;
         [Persistent("title")]
+        [Nullable(true)]
         [Indexed(Unique = true)]
         public string Title
         {
@@ -83,6 +84,7 @@ namespace BookFair.Models
 
         private decimal _price;
         [Persistent("price")]
+        [Nullable(true)]
         public decimal Price
         {
             get => _price;
@@ -104,6 +106,7 @@ namespace BookFair.Models
 
         private int _quantity;
         [Persistent("quantity")]
+        [Nullable(true)]
         public int Quantity
         {
             get => _quantity;

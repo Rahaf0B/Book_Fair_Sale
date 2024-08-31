@@ -14,5 +14,6 @@ namespace BookFair.Serializable
         public OrderStatus status { get; set; }
         public DateTime date { get; set; }
         public string customer_name { get; set; }
+        public decimal total_price {  get; set; }
     }
 }

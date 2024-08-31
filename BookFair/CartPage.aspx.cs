@@ -78,7 +78,7 @@ namespace BookFair
                 CartOrderItemCustomeComponent customeComponent = (CartOrderItemCustomeComponent)LoadControl("~/CustomeComponents/CartOrderItemCustomeComponent.ascx");
 
                 var imageUrl = "";
-                customeComponent.ID = dataToBind[i].id.ToString();
+                customeComponent.ID = dataToBind[i].id.ToString() + i.ToString();
                 customeComponent.Element_ID = dataToBind[i].id;
                 customeComponent.TitleText = dataToBind[i].title;
                 customeComponent.PriceText = dataToBind[i].price;

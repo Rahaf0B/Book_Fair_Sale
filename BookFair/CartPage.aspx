@@ -92,6 +92,7 @@ Inherits="BookFair.CartPage" Async="true" ViewStateMode="Enabled" %>
           Text="Make Order"
           OnClick="ASPxButtonMakeOrder_Click"
           CssClass="order-btn"
+          UseSubmitBehavior="false"
         ></dx:ASPxButton>
 
         <dx:ASPxPanel
