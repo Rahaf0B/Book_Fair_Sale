@@ -63,7 +63,7 @@ Inherits="BookFair.OrdersManagement" Async="true"%>
    <dx:aspxlabel
      ID="labelPageRedirect"
      CssClass="label-page-redirect"
-     Text="Go Back To Orders Page"
+     Text="Go Back To Home Page"
      runat="server"
    ></dx:aspxlabel>
  </div>

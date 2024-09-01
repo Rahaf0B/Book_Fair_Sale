@@ -45,7 +45,7 @@ namespace BookFair
                             }
                             else
                             {
-
+                                ASPxLabelError.Visible = true;
 
                             }
                         }
