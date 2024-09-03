@@ -167,12 +167,13 @@ namespace BookFair
         protected async void ButtonClickRemove(object sender, EventArgs e)
         {
             try
-            {
-                int id = _get_item_id(sender);
-                await _orderInstance.Remove_Item_From_Order(id);
-                int order_id;
+            {                int order_id;
+
                 if (int.TryParse(Request.QueryString["order_id"], out order_id))
                 {
+                    int id = _get_item_id(sender);
+                await _orderInstance.Remove_Item_From_Order(id,order_id);
+                
                     GetData(order_id);
 
                 }

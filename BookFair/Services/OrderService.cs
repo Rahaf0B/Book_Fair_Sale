@@ -168,20 +168,24 @@ namespace BookFair.Services
 
 
 
-        public async Task Remove_Item_From_Order(int order_item_id)
+        public async Task Remove_Item_From_Order(int order_item_id,int order_id)
         {
             try
             {
                 using (UnitOfWork uow = new UnitOfWork())
                 {
-
+                    Order order = await _orderController.GetSingleCustomerOrderById(uow, order_id);
+                    if(order != null) {
                     OrderItem item = await _orderController.GetOrderItemById(uow, order_item_id);
-                    if (item != null)
-                    {
-                        await _orderController.removeOrderItem(uow, item);
-                        await uow.CommitChangesAsync();
+                        if (item != null)
+                        {
+                            await _orderController.removeOrderItem(uow, item);
+                            order.Total_Price = order.Total_Price - item.Price;
+                            await uow.SaveAsync(order);
+                        }
 
                     }
+                    await uow.CommitChangesAsync();
                 }
             }
             catch (Exception ex)

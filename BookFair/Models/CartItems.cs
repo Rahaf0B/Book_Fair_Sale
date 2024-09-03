@@ -31,7 +31,6 @@ namespace BookFair.Models
 
 
         private int _quantity;
-        [Nullable(true)]
         [Persistent("quantity")]
         public int Quantity
         {

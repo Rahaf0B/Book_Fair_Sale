@@ -27,6 +27,7 @@ namespace BookFair.Models
 
         private decimal _salary;
         [Persistent("salary")]
+        [Nullable(true)]
         public decimal Salary
         {
             get => _salary;
@@ -39,6 +40,7 @@ namespace BookFair.Models
 
         private int _phone_number;
         [Persistent("phone_number")]
+        [Nullable(true)]
         public int Phone_Number
         {
             get => _phone_number;
