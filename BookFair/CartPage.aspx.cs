@@ -144,11 +144,13 @@ namespace BookFair
             {
                 CartOrderItemCustomeComponent customControl = (CartOrderItemCustomeComponent)sender;
 
-                int user_id = int.Parse(Session["user_id"].ToString());
-                bool status = await _cartInstance.Change_Item_Quntity(user_id, customControl.Element_ID, "decrese");
-
+                
                 if (customControl.Quntity != 1)
                 {
+
+                    int user_id = int.Parse(Session["user_id"].ToString());
+                    bool status = await _cartInstance.Change_Item_Quntity(user_id, customControl.Element_ID, "decrese");
+
 
                     if (!status)
                     {
